@@ -35,5 +35,4 @@ struct format
 	int (*function)(va_list, char[], int, int, int, int);
 };
 
-/**
- *  typrdef struct format_t - struct output
+#endif
