@@ -15,7 +15,7 @@
 int handle_write_char(char c, char buffer[],
 	int flags, int width, int precision, int size)
 { /* char is stored at left and pading at buffer's right */
-	int i = 0;
+	int y = 0;
 	char pad = ' ';
 
 	UNUSED(precision);
@@ -240,8 +240,8 @@ int write_pointer(char buffer[], int ind, int length,
 				buffer[--pad_start] = extra_c;
 			buffer[1] = '0';
 			buffer[2] = 'x';
-			return (write(1, &buffer[padd_start], y - padd_start) +
-				write(1, &buffer[ind], length - (1 - padd_start) - 2));
+			return (write(1, &buffer[pad_start], y - pad_start) +
+				write(1, &buffer[ind], length - (1 - pad_start) - 2));
 		}
 	}
 	buffer[--ind] = 'x';
