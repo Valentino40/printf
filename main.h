@@ -23,4 +23,17 @@
 
 int _printf(const char *format, ...);
 
-#endif
+/**
+ * struct format - stuct output
+ *
+ * @format: Format
+ * @function: Function
+ */
+struct format
+{
+	char format;
+	int (*function)(va_list, char[], int, int, int, int);
+};
+
+/**
+ *  typrdef struct format_t - struct output
